@@ -1,0 +1,73 @@
+---
+title: "My first rmd"
+author: "FC"
+date: "2023-10-14"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Here is where my text starts
+## Problems I had getting to this point
+The original rmd from MyAberdeen knitted to PDF fine but when I tried to repeat it I got an error. I didn't understand the error message. Is it that it can't overwrite an existed knitted PDF? It seems that way because it works if I go and delete the previously knitted PDF.
+\
+Then, I couldn't remember how to create a new markdown file and there was no Source window. I googled it and started adding this text. So far I have two levels of heading and a blank line, as well as prose. 
+  
+>This is a quote. At first it would not render properly and I couldn't find why. So, I pasted my markdown into chatgpt and asked it. It said that the backslash I had preceding the quote to make a line break might be combining with the chevron to mean something else. So, I replaced the backslashes with double spaces and now it works. 
+  
+Now I have a code chunk where I assign the words of the nato alphabet to the letters of my name. This is assigning *'values*'to *'objects'*.
+```{r}
+a <- "alpha"
+f <- "foxtrot"
+i <- "india"
+l <- "lima"
+n <- "november"
+o <- "oscar"
+u <- "uniform"
+```
+
+**This is prose between chunks. It is bold.**
+\
+Next I have a chunk to call on the objects I previously assigned values to but I don't know how to do that so they'll return all in a line yet, so it's just the f.
+```{r}
+f
+```
+
+### This is a numbered list
+1) Alexis
+2) Moira
+3) Patrick
+4) David
+5) Jonny
+  
+### This is an unordered list
+* Stevie
+    * Motel
+* Roland
+    * Mayor
+* Ronnie
+    * Contractor
+* Ted
+    * Vet
